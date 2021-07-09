@@ -1,3 +1,8 @@
+# About 
+
+GM Autodrive Challenge is a competition inviting various research focused schools in competition to develop the best autonomous vehicle. This repository represents the dataset aggregation for Traffic Sign and Signal recognition 2021 utilizing already made datasets such as LISA and BDD100k, reformatting them to have an identical common format, and then utilizing that to train the models referenced in the traffic_detect repo. Worked alongside Angelo Yang https://www.linkedin.com/in/ryang42, Nicholas Vacek https://www.linkedin.com/in/jung-hoon-seo-5ab813178, and Jung Hoon Seo https://www.linkedin.com/in/nicholas-vacek-314a23187
+We ultimately managed to place 3rd in great success and more information can be found here! http://autodrive.tamu.edu/ 
+
 # Final Demo
 - [Final Demo](https://drive.google.com/file/d/1ASL5h8EOw2rj-DX_UaIL8lclbXFhTwpL/view?usp=sharing)
     - You will need to access the link with TAMU email 
