@@ -1,0 +1,58 @@
+DATA_CONFIG:
+    ROOT: ""                # where the root of everything is other than python files. empty means this repo.
+                            # all other folder/file paths are relative to this ROOT!!!!!!
+    
+    INIT_DATA: InitDataset/ # Where to put unzipped/initialized/organized data
+    OUTPUT_DATA: "CombinedDataset/"   # where to put (final) output folders and files
+
+    FORMAT: DARKNET         # Data output format. Currently only darknet is supported, planned COCO and VOC
+
+    NAMES: classes.names    # filename of labels file (1 label per line)
+    TEST_SPLIT: 0.1         # size of test [0, 1.0)
+    RANDOM_STATE: 42        # seed for randomness of train/test split.
+    SHOW_IMG: False         # show each image as it is being processed with bbox
+    COLOR_MODE: -1          # -1 is RGB for opencv
+    IMG_FORMAT: .jpg        # output file extension.
+
+
+
+# Darknet format:    
+    # by default it will create it in the relative path (aka will put inside this folder repo).
+    # more specifics: https://github.com/AlexeyAB/Yolo_mark/issues/60#issuecomment-401854885
+    # will create:
+    #   test/
+    #   train/
+    #   test.txt
+    #   train.txt
+    #   combined.names
+    #   combined.data
+    
+
+LISA_TS:
+    RAW_FOLDER: RAW_DATASETS/
+    ZIP: signDatabasePublicFramesOnly.zip
+    INIT_FOLDER: LISA_TS/
+    PREPEND: LISATS-
+
+LISA_TL:
+    RAW_FOLDER: RAW_DATASETS/
+    ZIP: archive.zip
+    INIT_FOLDER: LISA_TL/
+    PREPEND: LISATL-
+
+MTSD:
+    RAW_FOLDER: RAW_DATASETS/
+    # TRAIN_ZIPS: [mtsd_v2_fully_annotated_images.train.0.zip, mtsd_v2_fully_annotated_images.train.1.zip, mtsd_v2_fully_annotated_images.train.2.zip]
+    TRAIN_ZIPS: [mtsd_v2_fully_annotated_images.train.0.zip]
+    TEST_ZIP: mtsd_v2_fully_annotated_images.test.zip
+    VAL_ZIP: mtsd_v2_fully_annotated_images.val.zip
+    ANNOTATION_ZIP: mtsd_v2_fully_annotated_annotation.zip
+    INIT_FOLDER: MTSD/
+    PREPEND: MTSD-
+    
+bdd100k:
+    RAW_FOLDER: RAW_DATASETS/
+    ZIP: bdd100k_images.zip
+    ANNOTATION_ZIP: bdd100k_labels_release.zip
+    INIT_FOLDER: bdd100k/
+    PREPEND: bdd100k-
